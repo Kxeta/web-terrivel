@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8"> 
+  <title>Envio de pedras via POST</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+	<form action="http://terrivel.herokuapp.com/monster" method="GET">
+		<label for="num_pedras">Número de pedras </label><input name="num_pedras" step="0.5" type="number" min="0" value="0" autofocus><br>
+		<label for="tam_pedras">Tamanho das pedras </label>
+		<select name="tam_pedras" id="tam_pedras">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3" selected="">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+		</select><br>
+		<label for="nome">Nome do monstro </label><input name="nome" pattern="[A-Za-z]{3,100}" placeholder="Digite um apelido..." type="text" title="Somente letras, mínimo 3 e máximo 100 caracteres"><br>
+		<label for="corCeu1"> Cor 1 do Céu</label> <input name="corCeu1" type="color"><br>
+		<label for="corCeu2"> Cor 2 do Céu</label> <input name="corCeu2" type="color"><br>
+		<label for="tipo_pedras_sortidas"> Pedras sortidas? </label> <input name="tipo_pedras_sortidas" type="checkbox" value="sim"><br>		
+		<label for="tipo_pedras">Tipo das pedras </label>
+		<select name="tipo_pedras" id="tipo_pedras">
+			<option value="marroada">Marroada</option>
+			<option value="ametista">Ametista</option>
+			<option value="topazio">Topázio</option>
+			<option value="espinela">Espinela</option>
+		</select><br>
+		<input value="Enviar pedras!" type="submit"> <input value="Limpar" type="reset">
+	</form>
+</body>
+</html>
